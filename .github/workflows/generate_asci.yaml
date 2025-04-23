@@ -16,3 +16,22 @@ jobs:
               run: |
                 chmod +x asci_script.sh
                 ./asci_script.sh
+            - name: sleep for 30 sec
+              run: sleep 30
+
+    test_job_2:
+        runs-on: ubuntu-latest
+        steps:
+          - name: sleep for 30 sec
+            run: sleep 30
+
+          - name: test file existance
+            run: grep -i 'dragon' dragon.txt
+    show_file:
+        runs-on: ubuntu-latest
+        steps:
+          - name: cat dragon file
+            run: cat dragon.txt
+          - name: print deploying
+            run: echo 'deploying.....'
+        
