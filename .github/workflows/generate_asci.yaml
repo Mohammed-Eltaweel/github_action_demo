@@ -13,4 +13,6 @@ jobs:
               run: ls -lah
 
             - name: Executet shell script
-              run: ./asci_script.sh
+              run: |
+                chmod +x asci_script.sh
+                ./asci_script.sh
