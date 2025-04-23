@@ -20,14 +20,16 @@ jobs:
               run: sleep 30
 
     test_job_2:
+        needs: ascii_job
         runs-on: ubuntu-latest
         steps:
           - name: sleep for 30 sec
-            run: sleep 30
+            run: sleep 10
 
           - name: test file existance
             run: grep -i 'dragon' dragon.txt
     show_file:
+        needs: [ascii_job, test_job_2]
         runs-on: ubuntu-latest
         steps:
           - name: cat dragon file
