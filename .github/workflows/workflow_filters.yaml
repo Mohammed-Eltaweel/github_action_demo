@@ -4,13 +4,9 @@ on:
     push:
         branches: 
             - main
-        branches-ignore: 
-            - features/*
+            - '!features/*'
 
     workflow_dispatch:
-
-    # schedule:
-    #     - cron: "*/59 * * * *"
 
     pull_request: 
         types: 
