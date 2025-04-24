@@ -8,9 +8,6 @@ on:
 
     workflow_dispatch:
 
-    # schedule:
-    #     - cron: "*/59 * * * *"
-
     pull_request: 
         types: 
             - opened
